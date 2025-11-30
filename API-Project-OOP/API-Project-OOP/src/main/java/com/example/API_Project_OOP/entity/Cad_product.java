@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
+import lombok.Lombok;
 import lombok.Setter;
 
 @Getter
@@ -15,7 +16,7 @@ import lombok.Setter;
 public class Cad_product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String categoria;
     private String descricao;
@@ -24,7 +25,7 @@ public class Cad_product {
     public Cad_product() {
     }
 
-    public Cad_product(int id, String categoria, String descricao, Double valor_produto) {
+    public Cad_product(Long id, String categoria, String descricao, Double valor_produto) {
         this.id = id;
         this.categoria = categoria;
         this.descricao = descricao;
