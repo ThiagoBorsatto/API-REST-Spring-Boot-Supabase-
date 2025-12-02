@@ -1,2 +1,54 @@
 # API-REST-Spring-Boot-Supabase-
-Final task for the academic subject Oriented Object Programming(OOP), the objective was to made a API REST using SpringBoot and connect if a DataBase as Mysql or PostgreSQL.
+This is the final task for the academic subject Object-Oriented Programming (OOP). The objective was to create a REST API using Spring Boot and connect it to a database such as MySQL or PostgreSQL.
+
+The team decided to build the API using a MySQL Database called DrugStore, which was developed for the academic subject Database Design, Development, and Management. The database contains the following tables:
+
+Category
+
+Invoice
+
+Invoice_Items
+
+Register_Client
+
+Register_Employee
+
+Register_Product
+
+Some of the tables have one-to-many relationships where we needed to develop the correct coding.
+
+The Controller folder contains all the CRUD operations to manage the table attributes. Here, it's possible to perform:
+
+GET (List all items): Lists all items in the class.
+
+GET (by ID): Lists a specific item in the class by its ID.
+
+POST (Create item): Creates a specific item.
+
+PUT (by ID): Updates a specific item by its ID.
+
+DELETE (by ID): Deletes a specific item by its ID.
+
+Contribution of Each Member:
+The Repository was created by Thiago Borsatto, who also invited the other members: Douglas Nolli and Kaue Dimas.
+
+The basic project generated on the Spring Boot Initializr (URL: https://start.spring.io) was set up by Thiago Borsatto and Douglas Nolli using the following configuration:
+
+Project: Maven
+
+Language: Java
+
+Spring Boot: 4.0.0
+
+Packaging: Jar
+
+Configuration: Properties
+
+Java: 17
+
+Codification:
+The Entity and Repository folders were developed by Thiago Borsatto, Douglas Nolli, and Kaue Dimas. All members helped with the development, choosing the names, methods, and correcting the syntax.
+
+The Controller folder was created by Thiago Borsatto and Douglas Nolli. Both coded all controllers together, defining the @RestControllers and @RequestMappings.
+
+README: Documentation typed by Thiago Borsatto.
