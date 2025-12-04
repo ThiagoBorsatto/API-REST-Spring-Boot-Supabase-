@@ -27,8 +27,7 @@ public class Category {
     public Category() {
     }
 
-    public Category(String category_description, long id_category) {
+    public Category(String category_description) {
         this.category_description = category_description;
-        this.id_category = id_category;
     }
 }

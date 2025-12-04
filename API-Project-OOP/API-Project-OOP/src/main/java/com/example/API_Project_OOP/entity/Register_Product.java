@@ -38,10 +38,9 @@ public class Register_Product {
     public Register_Product() {
     }
 
-    public Register_Product(Category id_category, String description, Long id_product, BigDecimal product_value) {
+    public Register_Product(Category id_category, String description, BigDecimal product_value) {
         this.id_category = id_category;
         this.description = description;
-        this.id_product = id_product;
         this.product_value = product_value;
     }
 }
