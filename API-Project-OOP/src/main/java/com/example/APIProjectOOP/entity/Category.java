@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP.entity;
+package com.example.APIProjectOOP.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -6,28 +6,25 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(of = "id_category")
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(of = "idcategory")
 @Table(name= "Category")
 public class Category {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name= "Id_Category")
-    private long id_category;
+    @Column(name= "IdCategory")
+    private Long idcategory;
 
-    @Column(name= "Category_Description", length= 100, nullable= false)
-    private String category_description;
-
-    public Category() {
-    }
-
-    public Category(String category_description) {
-        this.category_description = category_description;
-    }
+    @Column(name= "CategoryDescription", length= 100, nullable= false)
+    private String categorydescription;
 }

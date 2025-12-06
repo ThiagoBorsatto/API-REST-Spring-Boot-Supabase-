@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP.controller;
+package com.example.APIProjectOOP.controller;
 
 import java.util.List;
 import org.springframework.http.ResponseEntity;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
-import com.example.API_Project_OOP.entity.Invoice;
-import com.example.API_Project_OOP.repository.InvoiceRepository;
+import com.example.APIProjectOOP.entity.Invoice;
+import com.example.APIProjectOOP.repository.InvoiceRepository;
 
 @RestController
-@RequestMapping("/api/Invoice")
+@RequestMapping("/api/invoice")
 public class InvoiceController {
     private final InvoiceRepository invoiceRepository;
 
@@ -44,7 +44,7 @@ public class InvoiceController {
         if (!invoiceRepository.findById(id).isPresent()) {
             return ResponseEntity.notFound().build();
         }
-        invoice.setId_invoice(id);
+        invoice.setIdinvoice(id);
         return ResponseEntity.ok(invoiceRepository.save(invoice));
     }
 

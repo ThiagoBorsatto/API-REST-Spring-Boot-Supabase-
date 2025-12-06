@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP;
+package com.example.APIProjectOOP;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

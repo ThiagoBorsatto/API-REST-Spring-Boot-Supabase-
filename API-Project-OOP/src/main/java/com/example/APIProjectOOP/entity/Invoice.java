@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP.entity;
+package com.example.APIProjectOOP.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -26,28 +26,28 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(of = "id_invoice")
+@EqualsAndHashCode(of = "idinvoice")
 @Table(name= "Invoice")
 public class Invoice {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name= "Id_Invoice")
-    private Long id_invoice;
+    @Column(name= "IdInvoice")
+    private Long idinvoice;
 
     @ManyToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name= "Register_Client_Id_Client", nullable= false)
-    private Register_Client register_client;
+    @JoinColumn(name= "RegisterClientIdClient", nullable= false)
+    private RegisterClient registerclient;
 
     @ManyToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name= "Register_Employee_Id_Employee", nullable= false)
-    private Register_Employee register_employee;
+    @JoinColumn(name= "RegisterEmployeeIdEmployee", nullable= false)
+    private RegisterEmployee registeremployee;
 
-    @Column(name= "Emission_Date")
-    private LocalDate emission_date;
+    @Column(name= "EmissionDate")
+    private LocalDate emissiondate;
 
-    @Column(name= "Invoice_Value", precision= 10, scale= 2, nullable=false)
-    private BigDecimal invoice_value;
+    @Column(name= "InvoiceValue", precision= 10, scale= 2, nullable=false)
+    private BigDecimal invoicevalue;
 
     @OneToMany(mappedBy= "invoice", cascade= CascadeType.ALL, orphanRemoval= true)
-    private Set<Invoice_Itens> itens = new HashSet<>();
+    private Set<InvoiceItens> itens = new HashSet<>();
 }

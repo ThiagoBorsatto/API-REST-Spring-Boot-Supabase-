@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP.controller;
+package com.example.APIProjectOOP.controller;
 
 import java.util.List;
 import org.springframework.http.ResponseEntity;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
-import com.example.API_Project_OOP.entity.Category;
-import com.example.API_Project_OOP.repository.CategoryRepository;
+import com.example.APIProjectOOP.entity.Category;
+import com.example.APIProjectOOP.repository.CategoryRepository;
 
 @RestController
-@RequestMapping("/api/Category")
+@RequestMapping("/api/category")
 public class CategoryController {
     private final CategoryRepository categoryRepository;
 
@@ -44,7 +44,7 @@ public class CategoryController {
         if (!categoryRepository.findById(id).isPresent()) {
             return ResponseEntity.notFound().build();
         }
-        category.setId_category(id);
+        category.setIdcategory(id);
         return ResponseEntity.ok(categoryRepository.save(category));
     }
 

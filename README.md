@@ -7,13 +7,13 @@ Category
 
 Invoice
 
-Invoice_Items
+InvoiceItems
 
-Register_Client
+RegisterClient
 
-Register_Employee
+RegisterEmployee
 
-Register_Product
+RegisterProduct
 
 Some of the tables have one-to-many relationships where we needed to develop the correct coding.
 
@@ -52,3 +52,39 @@ The Entity and Repository folders were developed by Thiago Borsatto, Douglas Nol
 The Controller folder was created by Thiago Borsatto and Douglas Nolli. Both coded all controllers together, defining the @RestControllers and @RequestMappings.
 
 README: Documentation typed by Thiago Borsatto.
+
+New example of POST: made more readable
+
+http://localhost:8001/api/registerproduct
+{
+    "idcategory":{
+        "idcategory":1 
+    },
+    "description":"banana",
+    "productvalue":9.99
+}
+
+http://localhost:8001/api/registerclient
+{
+    "clientname":"Bill",
+    "clientadress":"Texas",
+    "clientphone":"11-22-33-44",
+    "clientemail":"bill@texas.com"
+}
+
+http://localhost:8001/api/registeremployee
+{
+    "employeename":"Josh",
+    "employeeadress":"Washington",
+    "employeephone":"22-33-44-55",
+    "employeeemail":"josh@washington.com"
+}
+
+http://localhost:8001/api/category
+{
+        "idcategory": 1,
+        "categorydescription": "Category A"
+    }
+
+Continue the testing using the POSTMAN web to make shur the GET, POST, PUT and DELETE on invoice, invoiceItens and invoiceIntensPK are working as entended.
+The entities register product,registerclient, registeremployee and category has being tested.
