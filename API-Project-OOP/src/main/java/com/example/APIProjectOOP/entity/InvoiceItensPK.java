@@ -19,9 +19,9 @@ import lombok.Setter;
 public class InvoiceItensPK implements Serializable{
     private static final long serialVersionUID = 1L;
 
-    @Column(name= "InvoiceIdInvoice")
+    @Column(name= "idinvoice")
     private Long idinvoice;
 
-    @Column(name= "RegisterProductidProduct")
-    private Long idProduct;
+    @Column(name= "idproduct")
+    private Long idproduct;
 }

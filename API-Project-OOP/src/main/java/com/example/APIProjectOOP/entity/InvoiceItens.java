@@ -26,14 +26,14 @@ public class InvoiceItens {
 
     @ManyToOne
     @MapsId("idinvoice")
-    @JoinColumn(name= "InvoiceIdInvoice")
+    @JoinColumn(name= "idinvoice")
     private Invoice invoice;
 
     @ManyToOne
-    @MapsId("idProduct")
-    @JoinColumn(name= "idProduct")
+    @MapsId("idproduct")
+    @JoinColumn(name= "idproduct")
     private RegisterProduct registerproduct;
 
     @Column(name= "ProductQuantity", nullable= false)
-    private int productquantity;
+    private Long productquantity;
 }

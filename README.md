@@ -1,4 +1,6 @@
-# API-REST-Spring-Boot-Supabase-
+# API-REST SpringBoot with MySQL Database:
+
+##Introduction
 This is the final task for the academic subject Object-Oriented Programming (OOP). The objective was to create a REST API using Spring Boot and connect it to a database such as MySQL or PostgreSQL.
 
 The team decided to build the API using a MySQL Database called DrugStore, which was developed for the academic subject Database Design, Development, and Management. The database contains the following tables:
@@ -82,8 +84,35 @@ http://localhost:8001/api/registeremployee
 
 http://localhost:8001/api/category
 {
-        "idcategory": 1,
-        "categorydescription": "Category A"
+    "categorydescription": "Category A"
+}
+
+http://localhost:8001/api/invoice
+{
+	"registerclient":{
+        "idclient":1
+    },
+	"registeremployee":{
+        "idemployee":1
+    },
+	"emissiondate":"2025-12-07",
+	"invoicevalue":200.00,
+    "itens":[]
+}
+
+http://localhost:8001/api/invoiceitens
+{
+	"idinvoiceitens":{
+        "idinvoice":10,
+        "idproduct":1
+    },
+    "invoice":{
+        "idinvoice":10
+    },
+    "registerproduct":{
+        "idProduct":1
+    },
+    "productquantity":32
     }
 
 Continue the testing using the POSTMAN web to make shur the GET, POST, PUT and DELETE on invoice, invoiceItens and invoiceIntensPK are working as entended.
