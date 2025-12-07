@@ -1,21 +1,17 @@
 # API-REST SpringBoot with MySQL Database:
 
-##Introduction
-This is the final task for the academic subject Object-Oriented Programming (OOP). The objective was to create a REST API using Spring Boot and connect it to a database such as MySQL or PostgreSQL.
+## Introduction
+
+This is the final task for the academic subject Object Oriented Programming(OOP). The objective was to create a REST API using SpringBoot and connect it to a database such as MySQL or PostgreSQL.
 
 The team decided to build the API using a MySQL Database called DrugStore, which was developed for the academic subject Database Design, Development, and Management. The database contains the following tables:
 
-Category
-
-Invoice
-
-InvoiceItems
-
-RegisterClient
-
-RegisterEmployee
-
-RegisterProduct
+    * Category
+    * Invoice
+    * InvoiceItems
+    * RegisterClient
+    * RegisterEmployee
+    * RegisterProduct
 
 Some of the tables have one-to-many relationships where we needed to develop the correct coding.
 
