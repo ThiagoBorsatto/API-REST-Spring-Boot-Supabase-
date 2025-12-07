@@ -12,7 +12,7 @@
 
 [Members Contribution](#Members-Contribution)
 
-## 1. Introduction
+## Introduction
 
 This is the final task for the academic subject Object Oriented Programming(OOP). The objective was to create a REST API using SpringBoot and connect it to a database such as MySQL or PostgreSQL.
 
@@ -27,7 +27,7 @@ The team decided to build the API using a MySQL Database called DrugStore, which
 
 Some of the tables have one-to-many relationships where we needed to develop the correct coding.
 
-## 2. SpringBoot Initializr
+## SpringBoot Initializr
 
 For the basic project generated on the Spring Boot Initializr (URL: https://start.spring.io) was set up using the following configuration:
 
@@ -38,7 +38,7 @@ For the basic project generated on the Spring Boot Initializr (URL: https://star
 * Configuration: Properties
 * Java: 17
 
-## 3. CRUD-Operations
+## CRUD-Operations
 
 The Controller folder contains all the CRUD operations to manage the table attributes. Here, it's possible to perform:
 
@@ -48,7 +48,7 @@ The Controller folder contains all the CRUD operations to manage the table attri
 * PUT (by ID): Updates a specific item by its ID.
 * DELETE (by ID): Deletes a specific item by its ID.
 
-## 4. Configuracion
+## Configuracion
 
 ### Initial Requirement
 
@@ -186,7 +186,7 @@ After the creation of a invoice you can make the relationship with the items usi
 
 This is a special table, represent the relacionship betwee Invoice and Invoice Items, how the Id_Invoice and Id_Product are embed we don't need maje anythig, the backend stipulat the relacion.
 
-## 5. Members Contribution
+## Members Contribution
 
 The Repository was created by Thiago Borsatto, who also invited the other members: Douglas Nolli and Kaue Dimas.
 
