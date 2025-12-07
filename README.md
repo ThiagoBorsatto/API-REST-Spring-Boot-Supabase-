@@ -15,16 +15,6 @@ The team decided to build the API using a MySQL Database called DrugStore, which
 
 Some of the tables have one-to-many relationships where we needed to develop the correct coding.
 
-## CRUD-Operations
-
-The Controller folder contains all the CRUD operations to manage the table attributes. Here, it's possible to perform:
-
-* GET (List all items): Lists all items in the class.
-* GET (by ID): Lists a specific item in the class by its ID.
-* POST (Create item): Creates a specific item.
-* PUT (by ID): Updates a specific item by its ID.
-* DELETE (by ID): Deletes a specific item by its ID.
-
 ## SpringBoot Initializr
 
 For the basic project generated on the Spring Boot Initializr (URL: https://start.spring.io) was set up using the following configuration:
@@ -36,9 +26,21 @@ For the basic project generated on the Spring Boot Initializr (URL: https://star
 * Configuration: Properties
 * Java: 17
 
-## Initial Requirement
+## CRUD-Operations
 
-First thing is configuret the 'application.properties' file:
+The Controller folder contains all the CRUD operations to manage the table attributes. Here, it's possible to perform:
+
+* GET (List all items): Lists all items in the class.
+* GET (by ID): Lists a specific item in the class by its ID.
+* POST (Create item): Creates a specific item.
+* PUT (by ID): Updates a specific item by its ID.
+* DELETE (by ID): Deletes a specific item by its ID.
+
+## Configuracion
+
+### Initial Requirement
+
+First thing is configuret the **application.properties** file:
 
     spring.datasource.url=jdbc:mysql://localhost:3306/drugstore
     spring.datasource.username=root
@@ -50,10 +52,24 @@ After, go to your MySQL an use the following code to create the database empty: 
 
     CREATE DATABASE drugstore;
 
-## Configuracion
+### API_REST 
 
+You can start the API using the file **ApiProjectOopApplication.java** on /API-Project_OOP/src/main/java/com/example/APIProjectOOP just press **RUN**. When the API is runnig the backend go create all the tables an attibuts.
 
-New example of POST: made more readable
+### POSTMAN
+
+Now you can use whatever API manager you what, we chose the POSTMAN, just setup and create a workspaces for your API. Add a http protocol, and this is where in going use the controllers.
+
+For all the CRUD operacions we gonna use the URL:**http://localhost:8001/api/**, the last part of the URL define what is the table we gon change. 
+
+### Testing and Examples
+
+#### Category
+
+For create a new category you can use URL:**http://localhost:8001/api/category** and the following Json sintaxe:
+    {
+        "categorydescription": "Category A"
+    }
 
 http://localhost:8001/api/registerproduct
 {
@@ -78,11 +94,6 @@ http://localhost:8001/api/registeremployee
     "employeeadress":"Washington",
     "employeephone":"22-33-44-55",
     "employeeemail":"josh@washington.com"
-}
-
-http://localhost:8001/api/category
-{
-    "categorydescription": "Category A"
 }
 
 http://localhost:8001/api/invoice
