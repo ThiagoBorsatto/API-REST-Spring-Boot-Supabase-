@@ -1,5 +1,9 @@
 # API-REST SpringBoot with MySQL Database:
 
+## SUMMARY
+
+[Link Text](URL)
+
 ## Introduction
 
 This is the final task for the academic subject Object Oriented Programming(OOP). The objective was to create a REST API using SpringBoot and connect it to a database such as MySQL or PostgreSQL.
@@ -60,35 +64,71 @@ You can start the API using the file **ApiProjectOopApplication.java** on /API-P
 
 Now you can use whatever API manager you what, we chose the POSTMAN, just setup and create a workspaces for your API. Add a http protocol, and this is where in going use the controllers.
 
-For all the CRUD operacions we gonna use the URL:**http://localhost:8001/api/**, the last part of the URL define what is the table we gon change. 
+For all the CRUD operacions we gonna use the URL **http://localhost:8001/api/**, the last part of the URL define what is the table we gon change. 
 
 ### Testing and Examples
 
 #### Category
 
-For create a new category you can use URL:**http://localhost:8001/api/category** and the following Json sintaxe:
+##### GET
+
+To list all the entities on the database just put the URL **http://localhost:8001/api/category** on POSTMAN and set the method to GET. 
+
+To list one specifically entity the URL need to include the Id of the category, example: **http://localhost:8001/api/category/1**, 1 represent the Id.
+
+##### POST
+
+For create a new category you can use URL **http://localhost:8001/api/category**, set the POSTMAN to POST and use the following JSON Syntax:
+
     {
         "categorydescription": "Category A"
     }
 
-http://localhost:8001/api/registerproduct
-{
-    "idcategory":{
-        "idcategory":1 
-    },
-    "description":"banana",
-    "productvalue":9.99
-}
+#### UPDATE
 
-http://localhost:8001/api/registerclient
-{
-    "clientname":"Bill",
-    "clientadress":"Texas",
-    "clientphone":"11-22-33-44",
-    "clientemail":"bill@texas.com"
-}
+To DELETE a determined entity use the example URL **http://localhost:8001/api/category/1** with the POSTMAN set to PUT:
 
-http://localhost:8001/api/registeremployee
+    {
+        "categorydescription": "Category A"
+    }
+
+##### DELETE
+
+To DELETE a determined entity use the example URL **http://localhost:8001/api/category/1** with the POSTMAN set to DELETE.
+
+### Register Product
+
+URL: **http://localhost:8001/api/registerproduct**
+
+It is just possible to create a product after a category exists, because the product needs an Id_Categoty for the **foreign key**, the syntax for this case is:
+
+    {
+        "idcategory":{
+            "idcategory":1 
+        },
+        "description":"banana",
+        "productvalue":9.99
+    }
+
+### Register Client
+
+URL: **http://localhost:8001/api/registerclient**
+
+Syntax example:
+    
+    {
+        "clientname":"Bill",
+        "clientadress":"Texas",
+        "clientphone":"11-22-33-44",
+        "clientemail":"bill@texas.com"
+    }
+
+### Register Employee
+
+URL: **http://localhost:8001/api/registeremployee**
+
+Syntax example:
+
 {
     "employeename":"Josh",
     "employeeadress":"Washington",
@@ -96,33 +136,47 @@ http://localhost:8001/api/registeremployee
     "employeeemail":"josh@washington.com"
 }
 
-http://localhost:8001/api/invoice
-{
-	"registerclient":{
-        "idclient":1
-    },
-	"registeremployee":{
-        "idemployee":1
-    },
-	"emissiondate":"2025-12-07",
-	"invoicevalue":200.00,
-    "itens":[]
-}
+### Invoice
 
-http://localhost:8001/api/invoiceitens
-{
-	"idinvoiceitens":{
-        "idinvoice":10,
-        "idproduct":1
-    },
-    "invoice":{
-        "idinvoice":10
-    },
-    "registerproduct":{
-        "idProduct":1
-    },
-    "productquantity":32
+URL: **http://localhost:8001/api/invoice**
+
+Syntax example:
+
+    {
+	    "registerclient":{
+            "idclient":1
+        },
+	    "registeremployee":{
+            "idemployee":1
+        },
+	    "emissiondate":"2025-12-07",
+	    "invoicevalue":200.00,
+        "itens":[]
     }
+
+### Invoice Itens
+
+URL: **http://localhost:8001/api/invoiceitens**
+
+After the creation of a invoice you can make the relationship with the items using the syntax example:
+
+    {
+	    "idinvoiceitens":{
+            "idinvoice":10,
+            "idproduct":1
+        },
+        "invoice":{
+            "idinvoice":10
+        },
+        "registerproduct":{
+            "idProduct":1
+        },
+        "productquantity":32
+    }
+
+### Invoice Itens PK
+
+This is a special table, represent the relacionship betwee Invoice and Invoice Items, how the Id_Invoice and Id_Product are embed we don't need maje anythig, the backend stipulat the relacion.
 
 ## Members Contribution
 
