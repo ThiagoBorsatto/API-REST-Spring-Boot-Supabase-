@@ -6,50 +6,52 @@ This is the final task for the academic subject Object Oriented Programming(OOP)
 
 The team decided to build the API using a MySQL Database called DrugStore, which was developed for the academic subject Database Design, Development, and Management. The database contains the following tables:
 
-    * Category
-    * Invoice
-    * InvoiceItems
-    * RegisterClient
-    * RegisterEmployee
-    * RegisterProduct
+* Category
+* Invoice
+* InvoiceItems
+* RegisterClient
+* RegisterEmployee
+* RegisterProduct
 
 Some of the tables have one-to-many relationships where we needed to develop the correct coding.
 
+## CRUD-Operations
+
 The Controller folder contains all the CRUD operations to manage the table attributes. Here, it's possible to perform:
 
-GET (List all items): Lists all items in the class.
+* GET (List all items): Lists all items in the class.
+* GET (by ID): Lists a specific item in the class by its ID.
+* POST (Create item): Creates a specific item.
+* PUT (by ID): Updates a specific item by its ID.
+* DELETE (by ID): Deletes a specific item by its ID.
 
-GET (by ID): Lists a specific item in the class by its ID.
+## SpringBoot Initializr
 
-POST (Create item): Creates a specific item.
+For the basic project generated on the Spring Boot Initializr (URL: https://start.spring.io) was set up using the following configuration:
 
-PUT (by ID): Updates a specific item by its ID.
+* Project: Maven
+* Language: Java
+* Spring Boot: 4.0.0
+* Packaging: Jar
+* Configuration: Properties
+* Java: 17
 
-DELETE (by ID): Deletes a specific item by its ID.
+## Initial Requirement
 
-Contribution of Each Member:
-The Repository was created by Thiago Borsatto, who also invited the other members: Douglas Nolli and Kaue Dimas.
+First thing is configuret the 'application.properties' file:
 
-The basic project generated on the Spring Boot Initializr (URL: https://start.spring.io) was set up by Thiago Borsatto and Douglas Nolli using the following configuration:
+    spring.datasource.url=jdbc:mysql://localhost:3306/drugstore
+    spring.datasource.username=root
+    spring.datasource.password=(your password goes here)
 
-Project: Maven
+If you have a password to access the MySQL, is necessary to put on the especifie line, if not is just left empty.
 
-Language: Java
+After, go to your MySQL an use the following code to create the database empty: **drugstore**
 
-Spring Boot: 4.0.0
+    CREATE DATABASE drugstore;
 
-Packaging: Jar
+## Configuracion
 
-Configuration: Properties
-
-Java: 17
-
-Codification:
-The Entity and Repository folders were developed by Thiago Borsatto, Douglas Nolli, and Kaue Dimas. All members helped with the development, choosing the names, methods, and correcting the syntax.
-
-The Controller folder was created by Thiago Borsatto and Douglas Nolli. Both coded all controllers together, defining the @RestControllers and @RequestMappings.
-
-README: Documentation typed by Thiago Borsatto.
 
 New example of POST: made more readable
 
@@ -111,5 +113,12 @@ http://localhost:8001/api/invoiceitens
     "productquantity":32
     }
 
-Continue the testing using the POSTMAN web to make shur the GET, POST, PUT and DELETE on invoice, invoiceItens and invoiceIntensPK are working as entended.
-The entities register product,registerclient, registeremployee and category has being tested.
+## Members Contribution
+
+The Repository was created by Thiago Borsatto, who also invited the other members: Douglas Nolli and Kaue Dimas.
+
+The Entity and Repository folders were developed by Thiago Borsatto, Douglas Nolli, and Kaue Dimas. All members helped with the development, choosing the names, methods, and correcting the syntax.
+
+The Controller folder was created by Thiago Borsatto and Douglas Nolli. Both coded all controllers together, defining the @RestControllers and @RequestMappings.
+
+README: Documentation typed by Thiago Borsatto.
