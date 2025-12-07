@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP.entity;
+package com.example.APIProjectOOP.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
@@ -18,22 +18,22 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(of = "id_invoice_itens")
-@Table(name= "Invoice_itens")
-public class Invoice_Itens {
+@EqualsAndHashCode(of = "idinvoiceitens")
+@Table(name= "Invoiceitens")
+public class InvoiceItens {
     @EmbeddedId
-    private Invoice_Itens_PK id_invoice_itens;
+    private InvoiceItensPK idinvoiceitens;
 
     @ManyToOne
-    @MapsId("id_invoice")
-    @JoinColumn(name= "Invoice_Id_Invoice")
+    @MapsId("idinvoice")
+    @JoinColumn(name= "idinvoice")
     private Invoice invoice;
 
     @ManyToOne
-    @MapsId("id_product")
-    @JoinColumn(name= "Id_Product")
-    private Register_Product register_product;
+    @MapsId("idproduct")
+    @JoinColumn(name= "idproduct")
+    private RegisterProduct registerproduct;
 
-    @Column(name= "Product_Quantity", nullable= false)
-    private int product_quantity;
+    @Column(name= "ProductQuantity", nullable= false)
+    private Long productquantity;
 }

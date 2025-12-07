@@ -1,7 +1,7 @@
-package com.example.API_Project_OOP.repository;
+package com.example.APIProjectOOP.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.example.API_Project_OOP.entity.Category;
+import com.example.APIProjectOOP.entity.Category;
 
 public interface  CategoryRepository extends JpaRepository<Category, Long>{
     

@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP.entity;
+package com.example.APIProjectOOP.entity;
 
 import java.math.BigDecimal;
 import jakarta.persistence.Column;
@@ -17,30 +17,30 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(of = "id_product")
-@Table(name = "Register_Product")
-public class Register_Product {
+@EqualsAndHashCode(of = "idProduct")
+@Table(name = "RegisterProduct")
+public class RegisterProduct {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name= "Id_Product")
-    private Long id_product;
+    @Column(name= "idProduct")
+    private Long idProduct;
 
     @Column(name= "Description", length= 100, nullable= false)
     private String description;
 
-    @Column(name= "Product_Value", precision= 10, scale= 2, nullable=false)
-    private BigDecimal product_value;
+    @Column(name= "ProductValue", precision= 10, scale= 2, nullable=false)
+    private BigDecimal productvalue;
 
     @ManyToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name= "Category_Id_Category", nullable= false)
-    private Category id_category;
+    @JoinColumn(name= "CategoryIdCategory", nullable= false)
+    private Category idcategory;
 
-    public Register_Product() {
+    public RegisterProduct() {
     }
 
-    public Register_Product(Category id_category, String description, BigDecimal product_value) {
-        this.id_category = id_category;
+    public RegisterProduct(Category idcategory, String description, BigDecimal productvalue) {
+        this.idcategory = idcategory;
         this.description = description;
-        this.product_value = product_value;
+        this.productvalue = productvalue;
     }
 }

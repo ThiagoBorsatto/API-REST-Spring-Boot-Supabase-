@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP.configuration;
+package com.example.APIProjectOOP.configuration;
 
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.OpenAPI;

@@ -1,4 +1,4 @@
-package com.example.API_Project_OOP.entity;
+package com.example.APIProjectOOP.entity;
 
 import java.io.Serializable;
 
@@ -16,12 +16,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Invoice_Itens_PK implements Serializable{
+public class InvoiceItensPK implements Serializable{
     private static final long serialVersionUID = 1L;
 
-    @Column(name= "Invoice_Id_Invoice")
-    private Long id_invoice;
+    @Column(name= "idinvoice")
+    private Long idinvoice;
 
-    @Column(name= "Register_Product_Id_Product")
-    private Long id_product;
+    @Column(name= "idproduct")
+    private Long idproduct;
 }
